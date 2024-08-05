@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<link rel="icon" href="">
+
+<head>
+    <title>Riddles</title>
+</head>
+<html>
+
+
+<body>
+    <h1>Answer the following riddles.</h1>
+
+    <form>
+        <P>What does a house wear?</P>
+        <input type="radio" name="colors" id="red">Address<br>
+        <input type="radio" name="colors" id="blue">Paint <br>
+        <input type="button" value="uncheck" id="red" onclick="uncheck()">
+
+        <p>A plane got an accident at the border of U.S.A and Canada, where are they going to burry the survivers ?</p>
+        <input type="radio" name="answer" required id="answer">U.S.A<br>
+        <input type="radio" name="answer" id="red">Canada<br>
+        <input type="radio" name="answer" id="read">They are not going to be
+        burried<br>
+        <input type="button" onclick="uncheck()" value="Uncheck" id="Uncheck">
+
+    </form>
+
+
+
+    <script>
+        function userInput() {
+            document.getElementById("read").ask = arguments
+
+        }
+
+        function check() {
+            document.getElementById("red").checked = true;
+        }
+        function uncheck() {
+            document.getElementById("red").checked = false;
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    #chat-container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #messages {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .message {
+      margin-bottom: 10px;
+    }
+
+    .user {
+      color: #333;
+    }
+
+    .bot {
+      color: #007bff;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="chat-container">
+    <ul id="messages"></ul>
+    <input type="text" id="user-input" placeholder="Type your message...">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const messagesContainer = document.getElementById('messages');
+      const userInput = document.getElementById('user-input');
+
+      function appendMessage(sender, content) {
+        const li = document.createElement('li');
+        li.className = `message ${sender}`;
+        li.textContent = `${sender}: ${content}`;
+        messagesContainer.appendChild(li);
+      }
+
+      function handleUserInput() {
+        const userMessage = userInput.value.trim().toLowerCase();
+        if (userMessage !== '') {
+          appendMessage('user', userMessage);
+          userInput.value = '';
+
+          // Simple predefined responses
+          let botMessage = 'Please enter a valid question.';
+
+          // Twi  responses
+          if (userMessage === '3te s3n ?') {
+            botMessage = '3y3.Na wonso 3te s3n ?';
+          } else if (userMessage.includes('Me ho y3')) {
+            botMessage = 'Y3 da nyame ase';
+          }
+
+          // English responses
+          if (userMessage === 'Hello') {
+            botMessage = 'Hi!';
+          } else if (userMessage.includes('how are you')) {
+            botMessage = 'I am just a computer program, but thanks for asking!';
+          }
+
+          // Spanish responses
+          else if (userMessage === 'hola') {
+            botMessage = 'Hola Amigo!';
+          } else if (userMessage.includes('Hola')) {
+            botMessage = 'Hola amigo how can I help u!';
+
+            // Constructed phrases
+          } else if (userMessage.includes('Cheat code for vice city')) {
+            botMessage = 'GETTHEREFAST!';
+          } else if (userMessage.includes('yo')) {
+            botMessage = 'Yeah whatsapp!';
+          }
+
+          // English responses for riddles
+          else if (userMessage === 'ask me a riddle') {
+            botMessage = 'ok,If you were in a race and you passed the second person, what will be your position?';
+          } else if (userMessage.includes('second')) {
+            botMessage = 'You are correct'
+          } else if (userMessage.includes('first')) {
+            botMessage = 'You are wrong'
+          }
+
+
+          // English responses for riddles2
+          if (userMessage === 'Why is it second but not first') {
+            botMessage = 'It is second because,the person only passed the second person but not the first.';
+          } else if (userMessage.includes('Thanks')) {
+            botMessage = 'You are welcome';
+          }
+
+
+          // Simulate a delay before the bot responds (in a real app, this would be fetched from a server)
+          setTimeout(function () {
+            appendMessage('bot', botMessage);
+          }, 500);
+        }
+      }
+
+      userInput.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+          handleUserInput();
+        }
+      });
+    });
+  </script>
+
+  <p> Questions you can ask </p>
+  <ul>
+    <li>Yo</li>
+    <li>ask me a riddle </li>
+    <li>Hola Amigo</li>
+    <li>Hello</li>
+    <li>How are you</li>
+    <li>3te s3n ?</li>
+  </ul>
+
+</body>
+
+</html>

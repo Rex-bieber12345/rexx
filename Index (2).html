@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music</title>
+<style>
+    header {
+        background-color: whitesmoke;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        margin: 0;
+        color: #ff0000;
+        /* YouTube red color */
+    }
+
+    h2 {
+        margin: 0;
+        color: #66bfbf;
+        /*Whatsapp blue color*/
+    }
+
+    .search-bar {
+        margin: 20px;
+        padding: 10px;
+        width: 400px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        display: flex;
+    }
+
+    .search-bar input {
+        flex: 1;
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .search-bar button {
+        background-color: #ff0000;
+        /* YouTube red color */
+        color: #fff;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .audio-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    .audio-card {
+        position: relative;
+        width: 400px;
+        margin: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .audio-card:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .audio-card video {
+        width: 100%;
+        height: auto;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .audio-card:hover .play-button {
+        display: block;
+    }
+
+    .audio-card h2 {
+        padding: 10px;
+        padding-bottom: 5px;
+        margin: 0;
+        background-color: #fff;
+        border-radius: 0 0 5px 5px;
+    }
+
+    footer {
+        font-size: 20px;
+    }
+
+    footer:any-link {
+        text-decoration: none;
+    }
+
+    footer:required {
+        color: #ff0000;
+    }
+</style>
+
+<header>
+    <div class="search-bar">
+        <input type="text" placeholder="Search audios..." inputmode="kana" aria-invalid="false" input type="">
+        <button onclick="searchVideos()">Search</button>
+    </div>
+</header>
+
+<body>
+    <div class="audio-grid">
+        <div class="audio-card">
+            <audio controls>
+                <source src="COOL MUSIC\Black-Sherif-Ft-Ardee-Come-Go-Remix-(TrendyBeatz.com) - Copy.mp3"
+                    type="audio/ogg">
+                <source src="COOL MUSIC\Black-Sherif-Ft-Ardee-Come-Go-Remix-(TrendyBeatz.com) - Copy.mp3"
+                    type="audio/mpeg">
+                Your browser does not support the audio element.
+                Download
+            </audio>
+            <h2>Come Go</h2>
+        </div>
+
+        <div class="audio-grid">
+            <div class="audio-card">
+                <audio controls>
+                    <source src="COOL MUSIC\Xxxtentacion-Hope-(Gospeljingle.com) (1).mp3" type="audio/ogg">
+                    <source src="COOL MUSIC\Xxxtentacion-Hope-(Gospeljingle.com) (1).mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                    Download
+                </audio>
+                <h2>Xxxtentacion-Hope</h2>
+            </div>
+
+            <div class="audio-grid">
+                <div class="audio-card">
+                    <audio controls>
+                        <source src="COOL MUSIC\Chike-Ft-Mohbad-Egwu-(TrendyBeatz.com).mp3" type="audio/ogg">
+                        <source src="COOL MUSIC\Chike-Ft-Mohbad-Egwu-(TrendyBeatz.com).mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                        Download
+                    </audio>
+                    <h2>Chike-Ft-Mohbad-Egwu</h2>
+                </div>
+
+                <div class="audio-grid">
+                    <div class="audio-card">
+                        <audio controls>
+                            <source src="COOL MUSIC\Drake-God-s-Plan-(UmLandi.com).mp3" type="audio/ogg">
+                            <source src="COOL MUSIC\Drake-God-s-Plan-(UmLandi.com).mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                            Download
+                        </audio>
+                        <h2>Drake-God's-Plan</h2>
+                    </div>
+
+
+                    <div class="audio-grid">
+                        <div class="audio-card">
+                            <audio controls>
+                                <source src="COOL MUSIC\Teejay_Ft_DJ_Mac_-_Drift_Speed_Up_ - Copy (3).mp3"
+                                    type="audio/ogg">
+                                <source src="COOL MUSIC\Teejay_Ft_DJ_Mac_-_Drift_Speed_Up_ - Copy (3).mp3"
+                                    type="audio/mpeg">
+                                Your browser does not support the audio element.
+                                Download
+                            </audio>
+                            <h2>Teejay Ft DJ Mac-Drift SpeedUp</h2>
+                        </div>
+
+
+                        <div class="audio-grid">
+                            <div class="audio-card">
+                                <audio controls>
+                                    <source src="COOL MUSIC\Asake_Ft_Olamide_-_Amapiano.mp3" type="audio/ogg">
+                                    <source src="COOL MUSIC\Asake_Ft_Olamide_-_Amapiano.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                    Download
+                                </audio>
+                                <h2>Asake_Ft_Olamide_-_Amapiano</h2>
+                            </div>
+
+                            <div class="audio-grid">
+                                <div class="audio-card">
+                                    <audio controls>
+                                        <source src="COOL MUSIC\DJ-Bentoa-Yeshua-Dance-Cruise-(TrendyBeatz.com).mp3"
+                                            type="audio/ogg">
+                                        <source src="COOL MUSIC\DJ-Bentoa-Yeshua-Dance-Cruise-(TrendyBeatz.com).mp3"
+                                            type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                        Download
+                                    </audio>
+                                    <h2>DJ-Bentoa-Yeshua-Dance-Cruise</h2>
+                                </div>
+
+
+                                <div class="audio-grid">
+                                    <div class="audio-card">
+                                        <audio controls>
+                                            <source src="COOL MUSIC\Banzy-Banero-Hosanna-www.Ghanasong.com_(0).mp3"
+                                                type="audio/ogg">
+                                            <source src="COOL MUSIC\Banzy-Banero-Hosanna-www.Ghanasong.com_(0).mp3"
+                                                type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                            Download
+                                        </audio>
+                                        <h2>Banzy-Banero-Hosanna</h2>
+                                    </div>
+
+                                    <div class="audio-grid">
+                                        <div class="audio-card">
+                                            <audio controls>
+                                                <source
+                                                    src="COOL MUSIC\Rap_Fada_-_Odo_Bi_Ye_Bad_Ft._King_Paluta_www.hitxgh.com_.mp3"
+                                                    type="audio/ogg">
+                                                <source
+                                                    src="COOL MUSIC\Rap_Fada_-_Odo_Bi_Ye_Bad_Ft._King_Paluta_www.hitxgh.com_.mp3"
+                                                    type="audio/mpeg">
+                                                Your browser does not support the audio element.
+                                                Download
+                                            </audio>
+                                            <h2>Rap_Fada_-_Odo_Bi_Ye_Bad_Ft_King_Paluta</h2>
+                                        </div>
+
+
+                                        <div class="audio-grid">
+                                            <div class="audio-card">
+                                                <audio controls>
+                                                    <source
+                                                        src="COOL MUSIC\Lil_Emm_-_Nwanyi_Oma_Sped_Up__Vistanaij.com.ng.mp3"
+                                                        type="audio/ogg">
+                                                    <source
+                                                        src="COOL MUSIC\Lil_Emm_-_Nwanyi_Oma_Sped_Up__Vistanaij.com.ng.mp3"
+                                                        type="audio/mpeg">
+                                                    Your browser does not support the audio element.
+                                                    Download
+                                                </audio>
+                                                <h2>Lil_Emm_-_Nwanyi_Oma_Sped_Up</h2>
+                                            </div>
+
+
+                                            <div class="audio-grid">
+                                                <div class="audio-card">
+                                                    <audio controls>
+                                                        <source src="COOL MUSIC\Centra_Cee_-_Doja_VistaNaija.Com.mp3"
+                                                            type="audio/ogg">
+                                                        <source src="COOL MUSIC\Centra_Cee_-_Doja_VistaNaija.Com.mp3"
+                                                            type="audio/mpeg">
+                                                        Your browser does not support the audio element.
+                                                        Download
+                                                    </audio>
+                                                    <h2>Centra_Cee_-_Doja</h2>
+                                                </div>
+
+
+                                                <div class="audio-grid">
+                                                    <div class="audio-card">
+                                                        <audio controls>
+                                                            <source src="COOL MUSIC\Amerado-Abronoma-Halmblog.com_.mp3"
+                                                                type="audio/ogg">
+                                                            <source src="COOL MUSIC\Amerado-Abronoma-Halmblog.com_.mp3"
+                                                                type="audio/mpeg">
+                                                            Your browser does not support the audio element.
+                                                            Download
+                                                        </audio>
+                                                        <h2>Amerado-Abronoma</h2>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="audio-grid">
+                                                    <div class="audio-card">
+                                                        <audio controls>
+                                                            <source
+                                                                src="COOL MUSIC\Lil_Nas_X_ft_Jack_Harlow_-_Industry_Baby.mp3"
+                                                                type="audio/ogg">
+                                                            <source
+                                                                src="COOL MUSIC\Lil_Nas_X_ft_Jack_Harlow_-_Industry_Baby.mp3"
+                                                                type="audio/mpeg">
+                                                            Your browser does not support the audio element.
+                                                            Download
+                                                        </audio>
+                                                        <h2>Lil Nas X ft Jack Harlow-Industry Baby</h2>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="audio-grid">
+                                                    <div class="audio-card">
+                                                        <audio controls>
+                                                            <source
+                                                                src="COOL MUSIC\Lil_Nas_X_ft_Billy_Ray_Cyrus_-_Old_Town_Road.mp3"
+                                                                type="audio/ogg">
+                                                            <source
+                                                                src="COOL MUSIC\Lil_Nas_X_ft_Billy_Ray_Cyrus_-_Old_Town_Road.mp3"
+                                                                type="audio/mpeg">
+                                                            Your browser does not support the audio element.
+                                                            Download
+                                                        </audio>
+                                                        <h2>Old Lil Nas X ft Billy Ray Cyrus - Old Town Road</h2>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="audio-grid">
+                                                    <div class="audio-card">
+                                                        <audio controls>
+                                                            <source
+                                                                src="COOL MUSIC\Olivetheboy-GoodSin-(TrendyBeatz.com).mp3"
+                                                                type="audio/ogg">
+                                                            <source
+                                                                src="COOL MUSIC\Olivetheboy-GoodSin-(TrendyBeatz.com).mp3"
+                                                                type="audio/mpeg">
+                                                            Your browser does not support the audio element.
+                                                            Download
+                                                        </audio>
+                                                        <h2>Olivetheboy-GoodSin</h2>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="audio-grid">
+                                                    <div class="audio-card">
+                                                        <audio controls>
+                                                            <source
+                                                                src="COOL MUSIC\Lil-Durk-feat-J-Cole-All-My-Life-(CeeNaija.com).mp3"
+                                                                type="audio/ogg">
+                                                            <source
+                                                                src="COOL MUSIC\Lil-Durk-feat-J-Cole-All-My-Life-(CeeNaija.com).mp3"
+                                                                type="audio/mpeg">
+                                                            Your browser does not support the audio element.
+                                                            Download
+                                                        </audio>
+                                                        <h2>Lil Durk feat J Cole-All My Life</h2>
+                                                    </div>
+
+                                                </div>
+
+
+                                                <footer>
+                                                    <form action="call:+233 531611470 " method="post">
+                                                        <label>Send me the song you need</label><br>
+                                                        <br><input class="txt1" type="text" placeholder="Send massage"
+                                                            col="10" row="20" required>
+                                                        <br>
+                                                        <br>
+
+                                                        <br><span>OR</span><br>
+                                                    </form>
+
+
+                                                    <span><br><a href="tel:+233 531611470">Call me</a></span>
+
+                                                </footer>
+
+                                                <script>
+                                                    function playVideo(button) {
+                                                        var audio = button.parentElement.querySelector('audio');
+                                                        audio.play();
+                                                    }
+                                                    function searchVideos() {
+                                                        var searchTerm = document.querySelector('.search-bar input').value.toLowerCase();
+                                                        var audiocard = document.querySelectorAll('.audio-card');
+
+                                                        audioCards.forEach(function (card) {
+                                                            var title = card.querySelector('h2').textContent.toLowerCase();
+                                                            var audio = card.querySelector('audio');
+
+                                                            if (title.includes(searchTerm)) {
+                                                                card.style.display = 'block';
+                                                            } else {
+                                                                card.style.display = 'none';
+                                                                audio.pause(); // Pause hidden audios
+                                                            }
+
+                                                            if (event.key === 'Enter') {
+                                                                handleUserInput();
+                                                            }
+
+                                                        });
+                                                    }
+
+                                                </script>
+
+                                                <script>
+                                                    // Password for the website
+                                                    const password = "SIAW SABRINA";
+
+                                                    // Prompt the user for a password
+                                                    let enteredPassword = prompt("Enter the password:");
+
+                                                    // Check if the entered password is correct
+                                                    if (enteredPassword === password) {
+                                                        alert("Password correct. You can access the website.");
+                                                    } else {
+                                                        alert("Password incorrect. Access denied.");
+                                                        // Redirect to another page or take another action
+                                                        // window.location.href = "";
+
+                                                        if (enteredPassword === password) {
+                                                            alert("Password correct. You can access the website.")
+                                                        } else {
+                                                            //Redirect user to another page
+                                                            window.location.href = "Index(0).html"
+                                                        }
+                                                    }
+                                                </script>
+
+</body>
+
+</html>

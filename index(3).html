@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contain {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="int."],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .Log1 {
+            width: 50%;
+            padding: 8px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .Log {
+            width: 50%;
+            padding: 8px;
+            background-color: Red;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            direction: rtl;
+            transition: 5s ease;
+        }
+
+        .Log:hover {
+
+            background: color #0f0;
+        }
+
+        .Log1:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contain" id="contain">
+        <h1>Sign Up</h1>
+        <form action="index.html" action="" method="POST" autocomplete="off" autocapitalize="on">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+
+
+            <label for="password">Password:</label>
+            <input type="int." id="password" name="password" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="password" required>
+
+            <button type="submit" id="register" class="Log1">Sign-up</button>
+            <br>
+            <button type="submit" id="login" class="Log">log-in</button>
+
+        </form>
+    </div>
+    <span>
+        <p>Already have an account? <a href="xx.html">Sign In</a>
+        </p>
+    </span>
+
+</body>
+
+<script>
+
+</script>
+
+</html>

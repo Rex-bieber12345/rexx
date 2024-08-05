@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="shortcut icon" href="c:\Users\User\Desktop\favicon_io\favicon.ico" type="image/x-icon">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Thi website is movies VidRex and it is for movies.This is the only platform that allows special request.">
+    <meta name="author" content="Rexbieber">
+
+
+
+    <title>VidRex platform</title>
+    <style>
+        body {
+            font-family: 'Edwardian script ITC' Tisa;
+            margin: 0;
+            padding: 0;
+            background-color: #e4f9f4f5;
+        }
+
+        header {
+            background-color: whitesmoke;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            color: #ff0000;
+            /* YouTube red color */
+        }
+
+        h2 {
+            margin: 0;
+            color: #66bfbf;
+            /*Whatsapp blue color*/
+        }
+
+        .search-bar {
+            margin: 20px;
+            padding: 10px;
+            width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            display: flex;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            background-color: #ff0000;
+            /* YouTube red color */
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .video-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .video-card {
+            position: relative;
+            width: 400px;
+            margin: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .video-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-card video {
+            width: 100%;
+            height: auto;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            display: none;
+        }
+
+        .play-button img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .video-card:hover .play-button {
+            display: block;
+        }
+
+        .video-card h2 {
+            padding: 10px;
+            padding-bottom: 5px;
+            margin: 0;
+            background-color: #fff;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .btn {
+            background: #3498db;
+            background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+            background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+            background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+            background-image: -o-linear-gradient(top, #3498db, #2980b9);
+            background-image: linear-gradient(to bottom, #3498db, #2980b9);
+            -webkit-border-radius: 28;
+            -moz-border-radius: 28;
+            border-radius: 28px;
+            text-shadow: 0px 1px 3px #666666;
+            font-family: Georgia;
+            color: #12ffff;
+            font-size: 20px;
+            padding: 10px 20px 10px 20px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #3cb0fd;
+            text-decoration: none;
+        }
+
+
+        .download-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4285f4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .download-link:hover {
+            background-color: #1a73e8;
+        }
+
+        .pray {
+            color: slateblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="YouTube">VidRex</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search videos... " style="border-radius: 10%;">
+            <button onclick="searchVideos()">Search</button>
+        </div>
+        <h1 class="pray">TO PLAY CLICK ONCE. TO PAUSE CLICK TWICE</h1>
+    </header>
+
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            p {
+                text-align: center;
+                font-size: 60px;
+                margin-top: 0px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="video-grid">
+
+            <!-- Video 1 -->
+            <div class="video-card">
+                <video controls>
+                    <source src="" type="video/mp4">
+                    <track kind="subtitles" src="captions1.vtt" srclang="en" label="English">
+                    Your browser does not support the video tag.
+                </video>
+                <button class="play-button" onclick="togglePlayPause(this)">
+                    <img src="play-button.png" alt="Play">
+                </button>
+                <h2></h2>
+            </div>
+
+            <!-- Add more videos as needed -->
+
+
+            <script>
+                function playVideo(button) {
+                    var video = button.parentElement.querySelector('video');
+                    video.play();
+                }
+
+                function searchVideos() {
+                    var searchTerm = document.querySelector('.search-bar input').value.toLowerCase();
+                    var videoCards = document.querySelectorAll('.video-card');
+
+                    videoCards.forEach(function (card) {
+                        var title = card.querySelector('h2').textContent.toLowerCase();
+                        var video = card.querySelector('video');
+
+                        if (title.includes(searchTerm)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                            video.pause(); // Pause hidden videos
+                        }
+
+                        if (event.key === 'Enter') {
+                            handleUserInput();
+                        }
+
+                    });
+                }
+
+                setTimeout(function () {
+                    appendMessage('Videos', URIError);
+                }, 500);
+
+
+                function togglePlayPause(button) {
+                    var video = button.parentElement.querySelector('video');
+                    if (video.paused || video.ended) {
+                        video.play();
+                        button.innerHTML = '<img src="pause-button.png" alt="Pause">';
+                    } else {
+                        video.pause();
+                        button.innerHTML = '<img src="play-button.png" alt="Play">';
+                    }
+                }
+
+                userInput.addEventListener('keydown', function (event) {
+                    if (event.key === 'Enter') {
+                        handleUserInput();
+                    }
+                });
+
+            </script>
+
+    </body>
+
+</html>
